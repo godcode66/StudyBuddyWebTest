@@ -1,0 +1,68 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+Study Buddy Web Test,Firefox 132.0,"1. Login
+2. Edit Profile
+3. Create A room
+4. Write A comment",,13-11-2024 16:32:38,13-11-2024 16:37:32,4m - 53.878s,FAILED
+,,,,,,,
+Test Cases/Login/TC0001 - Login Positive,Firefox 132.0,,,13-11-2024 16:32:40,13-11-2024 16:33:45,1m - 4.569s,PASSED
+"openBrowser("""")",Firefox 132.0,,,13-11-2024 16:32:42,13-11-2024 16:33:18,36.093s,PASSED
+"navigateToUrl(""http://127.0.0.1:8000/"")",Firefox 132.0,,,13-11-2024 16:33:18,13-11-2024 16:33:25,6.093s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/p_Login""))",Firefox 132.0,,,13-11-2024 16:33:25,13-11-2024 16:33:29,4.534s,PASSED
+currentUrl = getUrl(),Firefox 132.0,,,13-11-2024 16:33:29,13-11-2024 16:33:29,0.229s,PASSED
+"println(""URL saat ini: "" + currentUrl)",Firefox 132.0,,,13-11-2024 16:33:29,13-11-2024 16:33:29,0.184s,PASSED
+"if (currentUrl != ""http://127.0.0.1:8000/login/"")",Firefox 132.0,,,13-11-2024 16:33:29,13-11-2024 16:33:30,0.099s,PASSED
+else,Firefox 132.0,,,13-11-2024 16:33:30,13-11-2024 16:33:32,1.921s,PASSED
+"setText(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/input_Email_email""), ""antmart@mail.com"")",Firefox 132.0,,,13-11-2024 16:33:32,13-11-2024 16:33:34,2.558s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/input_Password_password""), ""N7njEIPCK84UCSsA1L+SSQ=="")",Firefox 132.0,,,13-11-2024 16:33:34,13-11-2024 16:33:35,1.067s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/button_lock                                _9fa546""))",Firefox 132.0,,,13-11-2024 16:33:35,13-11-2024 16:33:43,7.754s,PASSED
+"verifyElementPresent(findTestObject(""Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners around the world/p_arthonymart arthonymart""), 0)",Firefox 132.0,,,13-11-2024 16:33:43,13-11-2024 16:33:45,1.659s,PASSED
+,,,,,,,
+Test Cases/Login/TC0002 - Login Failed,Firefox 132.0,usename fail,,13-11-2024 16:33:45,13-11-2024 16:34:33,48.127s,PASSED
+"openBrowser("""")",Firefox 132.0,,,13-11-2024 16:33:48,13-11-2024 16:34:15,26.900s,PASSED
+"navigateToUrl(""http://127.0.0.1:8000/"")",Firefox 132.0,,,13-11-2024 16:34:15,13-11-2024 16:34:23,7.172s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/p_Login""))",Firefox 132.0,,,13-11-2024 16:34:23,13-11-2024 16:34:26,3.366s,PASSED
+currentUrl = getUrl(),Firefox 132.0,,,13-11-2024 16:34:26,13-11-2024 16:34:26,0.056s,PASSED
+"println(""URL saat ini: "" + currentUrl)",Firefox 132.0,,,13-11-2024 16:34:26,13-11-2024 16:34:26,0.046s,PASSED
+"if (currentUrl != ""http://127.0.0.1:8000/login/"")",Firefox 132.0,,,13-11-2024 16:34:26,13-11-2024 16:34:26,0.013s,PASSED
+else,Firefox 132.0,,,13-11-2024 16:34:26,13-11-2024 16:34:26,0.219s,PASSED
+"setText(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/input_Email_email""), ""antman@gmail.com"")",Firefox 132.0,,,13-11-2024 16:34:26,13-11-2024 16:34:28,1.712s,PASSED
+"setEncryptedText(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/input_Password_password""), ""N7njEIPCK84UCSsA1L+SSQ=="")",Firefox 132.0,,,13-11-2024 16:34:28,13-11-2024 16:34:29,1.529s,PASSED
+"click(findTestObject(""Object Repository/Login/Page_StudyBuddy - Find study partners aroun_c50df5/Page_StudyBuddy - Find study partners aroun_c50df5/button_lock                                _9fa546""))",Firefox 132.0,,,13-11-2024 16:34:29,13-11-2024 16:34:32,2.342s,PASSED
+"verifyElementText(findTestObject(""Page_StudyBuddy - Login Fail Assert/Page_StudyBuddy - Find study partners around the world/li_User does not exist""), ""User does not exist"")",Firefox 132.0,,,13-11-2024 16:34:32,13-11-2024 16:34:33,0.898s,PASSED
+,,,,,,,
+Test Cases/Home Page/TC0003 - Create a Room,Firefox 132.0,Selenium room,,13-11-2024 16:34:33,13-11-2024 16:35:15,42.195s,PASSED
+"callTestCase(findTestCase(""Login/TC0001 - Login Positive""), [:], STOP_ON_FAILURE)",Firefox 132.0,,,13-11-2024 16:34:34,13-11-2024 16:35:06,31.743s,PASSED
+"findWebElement(findTestObject(""Room Page/Page_StudyBuddy - Find study partners around the world/a_add                                            Create Room""), 0)",Firefox 132.0,,,13-11-2024 16:35:06,13-11-2024 16:35:06,0.620s,PASSED
+"click(findTestObject(""Room Page/Page_StudyBuddy - Find study partners around the world/a_add                                            Create Room""))",Firefox 132.0,,,13-11-2024 16:35:06,13-11-2024 16:35:07,0.949s,PASSED
+currentUrl = getUrl(),Firefox 132.0,,,13-11-2024 16:35:07,13-11-2024 16:35:07,0.045s,PASSED
+"println(""URL saat ini: "" + currentUrl)",Firefox 132.0,,,13-11-2024 16:35:07,13-11-2024 16:35:07,0.023s,PASSED
+"if (currentUrl != ""http://127.0.0.1:8000/create-room/"")",Firefox 132.0,,,13-11-2024 16:35:07,13-11-2024 16:35:07,0.012s,PASSED
+else,Firefox 132.0,,,13-11-2024 16:35:07,13-11-2024 16:35:14,7.032s,PASSED
+"verifyElementText(findTestObject(""Room Page/Page_StudyBuddy - Find study partners around the world/a_First Laravel""), ""First Laravel"")",Firefox 132.0,,,13-11-2024 16:35:14,13-11-2024 16:35:15,0.651s,PASSED
+,,,,,,,
+Test Cases/Room Section/TC0005 - Write comment,Firefox 132.0,write comment in 'First Laravel' room,,13-11-2024 16:35:15,13-11-2024 16:36:28,1m - 12.712s,FAILED
+"callTestCase(findTestCase(""Login/TC0001 - Login Positive""), [:], STOP_ON_FAILURE)",Firefox 132.0,,,13-11-2024 16:35:17,13-11-2024 16:35:55,37.481s,PASSED
+"verifyElementVisible(findTestObject(""Room Section/Page_StudyBuddy - Find study partners around the world/a_First Laravel""))",Firefox 132.0,,,13-11-2024 16:35:55,13-11-2024 16:36:28,32.654s,FAILED
+,,,,,,,
+Test Cases/Profile/TC0004 - Edit Profile,Firefox 132.0,,,13-11-2024 16:36:28,13-11-2024 16:37:32,1m - 4.422s,PASSED
+"callTestCase(findTestCase(""Login/TC0001 - Login Positive""), [:], STOP_ON_FAILURE)",Firefox 132.0,,,13-11-2024 16:36:31,13-11-2024 16:37:20,49.452s,PASSED
+"findWebElement(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/div_arthonymart arthonymart                                                                            chevron-down""), 0)",Firefox 132.0,,,13-11-2024 16:37:20,13-11-2024 16:37:21,1.364s,PASSED
+"verifyElementPresent(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/button_chevron-down""), 0)",Firefox 132.0,,,13-11-2024 16:37:21,13-11-2024 16:37:22,0.926s,PASSED
+"click(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/button_chevron-down""))",Firefox 132.0,,,13-11-2024 16:37:22,13-11-2024 16:37:24,1.499s,PASSED
+"click(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/a_tools                                                                                        Settings""))",Firefox 132.0,,,13-11-2024 16:37:24,13-11-2024 16:37:25,1.475s,PASSED
+currentUrl = getUrl(),Firefox 132.0,,,13-11-2024 16:37:25,13-11-2024 16:37:25,0.080s,PASSED
+"println(""URL saat ini: "" + currentUrl)",Firefox 132.0,,,13-11-2024 16:37:25,13-11-2024 16:37:25,0.014s,PASSED
+"if (currentUrl != ""http://127.0.0.1:8000/update-user/"")",Firefox 132.0,,,13-11-2024 16:37:25,13-11-2024 16:37:25,0.007s,PASSED
+else,Firefox 132.0,,,13-11-2024 16:37:25,13-11-2024 16:37:26,0.107s,PASSED
+"verifyElementText(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/label_Bio""), ""Bio"")",Firefox 132.0,,,13-11-2024 16:37:26,13-11-2024 16:37:26,0.718s,PASSED
+"findWebElement(findTestObject(""Page_StudyBuddy - Find study partners around the world/textarea_tester""), 0)",Firefox 132.0,,,13-11-2024 16:37:26,13-11-2024 16:37:27,0.596s,PASSED
+"clearText(findTestObject(""Page_StudyBuddy - Find study partners around the world/textarea_tester""))",Firefox 132.0,,,13-11-2024 16:37:27,13-11-2024 16:37:28,0.633s,PASSED
+"setText(findTestObject(""Page_StudyBuddy - Find study partners around the world/textarea_tester""), ""Allobank Laravel"")",Firefox 132.0,,,13-11-2024 16:37:28,13-11-2024 16:37:28,0.811s,PASSED
+"findWebElement(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/button_Update""), 0)",Firefox 132.0,,,13-11-2024 16:37:28,13-11-2024 16:37:29,0.459s,PASSED
+"click(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/button_Update""))",Firefox 132.0,,,13-11-2024 16:37:29,13-11-2024 16:37:30,1.432s,PASSED
+currentUrl1 = getUrl(),Firefox 132.0,,,13-11-2024 16:37:30,13-11-2024 16:37:30,0.055s,PASSED
+"println(""URL saat ini: "" + currentUrl1)",Firefox 132.0,,,13-11-2024 16:37:30,13-11-2024 16:37:30,0.010s,PASSED
+"if (currentUrl1 != ""http://127.0.0.1:8000/profile/6/"")",Firefox 132.0,,,13-11-2024 16:37:30,13-11-2024 16:37:30,0.003s,PASSED
+else,Firefox 132.0,,,13-11-2024 16:37:30,13-11-2024 16:37:30,0.021s,PASSED
+"verifyElementText(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/h3_About""), ""ABOUT"")",Firefox 132.0,,,13-11-2024 16:37:30,13-11-2024 16:37:32,1.237s,PASSED
+"verifyElementText(findTestObject(""Profile page/Page_StudyBuddy - Find study partners around the world/p_Allobank Laravel""), ""Allobank Laravel"")",Firefox 132.0,,,13-11-2024 16:37:32,13-11-2024 16:37:32,0.557s,PASSED
