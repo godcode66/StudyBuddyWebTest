@@ -3,7 +3,8 @@
 #### by: Muhammad Alghifary
 #### email: ghifary21@gmail.com
 
-### Study Buddy merupakan website kelompok belajar yang dibuat oleh channel youtube @TraversyMedia berbasis Django Framework.
+### Study Buddy is a study group website created by @TraversyMedia youtube channel that uses Django Framework
+
 #### link: https://youtu.be/PtQiiknWUcI?si=BNEolftEsXew0j1h
 
 #### credit: @TraversyMedia
